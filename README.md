@@ -1,0 +1,1 @@
+﻿Crypto Cumulative Returns Comparison
