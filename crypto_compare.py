@@ -243,10 +243,20 @@ if len(a_list)==5:
 
 
 
-
-
-
 df_new = df_new.set_index('index')
 df_new
 
-st.line_chart(df_new)
+#st.line_chart(df_new)
+
+data = df_new.reset_index().melt('index')
+
+my_chart = alt.Chart(data).mark_line().encode(
+    x=alt.X('index:T', title='Time'),
+    y='value',
+    color='variable'
+).properties(
+    width=900,
+    height=400
+).interactive()
+
+st.altair_chart(my_chart)
