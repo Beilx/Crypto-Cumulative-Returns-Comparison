@@ -30,7 +30,7 @@ tickers = ('bitcoin', 'ethereum', 'tether', 'binancecoin', 'cardano', 'ripple', 
  'bitcoin-gold', 'liquity-usd', '0x', 'bancor', 'axie-infinity', 'qtum', 'zencash', 'ecomi', 'flow',
  'siacoin', 'compound-usdt')
 
-dropdown = st.multiselect ('Please pick cryptoassets (max=5)', tickers, default=["bitcoin"])
+dropdown = st.multiselect ('Please pick cryptoassets (max=5)', tickers, default=["bitcoin","ethereum","monero","basic-attention-token","zcash"])
 
 
 def datetime_to_unix(year, month, day):
